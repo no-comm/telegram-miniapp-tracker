@@ -1,4 +1,4 @@
-# Telegram MiniApp Tracker
+# Telegram Mini App Traffic Tracker
 
 The project allows you to track traffic for any telegram mini application.
 
