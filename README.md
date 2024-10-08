@@ -14,6 +14,8 @@ Example: python main.py web
 
 ## Web
 
+using [playwright](https://playwright.dev/python/docs/intro)
+
 To log in via web telegram, you must specify the web argument, after which authorization will be performed, followed by saving the session.json, for the following launches.
 
 After authorization, you just need to open a window with the game (the mini application launch button)
