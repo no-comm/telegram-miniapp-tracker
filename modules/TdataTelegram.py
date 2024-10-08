@@ -3,7 +3,7 @@ from pathlib import Path
 from pyrogram.raw import functions, types
 
 class TdataTelegram:
-    async def start(self, folder, username, short_name, start_param):
+    async def start(self, folder, username, short_name, start_param=None):
         session = SessionManager.from_tdata_folder(Path(folder))
         
         client = session.pyrogram_client()

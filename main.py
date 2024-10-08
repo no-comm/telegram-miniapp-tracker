@@ -41,9 +41,12 @@ if __name__ == "__main__":
             if method == 'web':
                 asyncio.run(start(method))
             elif method == 'tdata':
-                if len(sys.argv) != 5:
+                if len(sys.argv) >= 4:
                     raise ValueError("Invalid number of arguments. Usage: python main.py tdata <username_bot> <short_app_name> <start_param>")
-                asyncio.run(start(method, sys.argv[2], sys.argv[3], sys.argv[4]))
+                if len(sys.argv) == 5:
+                    asyncio.run(start(method, sys.argv[2], sys.argv[3], sys.argv[4]))
+                else:
+                    asyncio.run(start(method, sys.argv[2], sys.argv[3]))
             else:
                 raise ValueError(f"Unknown method. Supported methods are: {', '.join(['web', 'tdata'])}")
     except Exception as e:
